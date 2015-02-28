@@ -1,0 +1,17 @@
+<div class="ui medium image">
+  <label class="ui large ribbon label">Profile Image</label> 
+  </br>
+  </br>
+  <img src="/profile/getpicture/${me.id}"
+    onerror="this.src='../../../public/images/default.jpg'" width="100"
+    height="120">
+</div>
+<section class="ui basic raised form segment">
+  <form action="/profile/uploadpicture/${me.id}" method="post"
+    enctype="multipart/form-data">
+    <div class="ui field">
+      <input type="file" name="picture"> </input>
+    </div>
+    <button class="ui basic large button teal submit labeled icon"><i class="icon upload"></i>Upload</button>
+  </form>
+</section>

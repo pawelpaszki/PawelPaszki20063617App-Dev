@@ -1,0 +1,9 @@
+<div class="ui basic list">
+  #{list items:users, as:'user'} #{if user.posts.size() > 0}
+  <div class="item">
+    <a class="ui basic teal inverted labeled button" href="blog/view/${user.id}"> <i class="pointing right icon"></i>
+      &nbsp; ${user.firstName}'s Public Blog
+    </a>
+  </div>
+  #{/if} #{/list}
+</div>

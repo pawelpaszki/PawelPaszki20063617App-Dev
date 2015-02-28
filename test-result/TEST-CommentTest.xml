@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.24" errors="0" skipped="0" tests="7" name="CommentTest">
+  <testcase classname="CommentTest" name="testFindComments" time="0.045">
+      </testcase>
+  <testcase classname="CommentTest" name="testNoComments" time="0.034">
+      </testcase>
+  <testcase classname="CommentTest" name="testAddSingleComment" time="0.034">
+      </testcase>
+  <testcase classname="CommentTest" name="testAddMultipleComments" time="0.036">
+      </testcase>
+  <testcase classname="CommentTest" name="testDeleteComment" time="0.034">
+      </testcase>
+  <testcase classname="CommentTest" name="testDeletePostAndComment" time="0.03">
+      </testcase>
+  <testcase classname="CommentTest" name="testUpdateComment" time="0.027">
+      </testcase>
+</testsuite>

@@ -1,0 +1,37 @@
+<div class="ui five special cards">
+  #{list items:users, as:'user'} #{if (!me.equals(user))}
+  <div class="card">
+    <div class="dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            #{if (!me.isFriendOf(user))} <a
+              href="members/follow/${user.id}"
+              class="ui inverted button"><i class="plus square icon"></i>Add
+              Friend</a> #{/if} #{else}
+            <div class="ui inverted button">
+              Friends &nbsp;<i class="green check square icon"></i>
+            </div>
+            #{/else}
+          </div>
+        </div>
+      </div>
+      <img src="/profile/getpicture/${user.id}"
+        onerror="this.src='../../../public/images/default.jpg'">
+    </div>
+    <div class="content">
+      <a class="header"> #{if (loggedInUsers.contains(user))} <i
+        class="ui tiny empty green circular label"></i>&nbsp; #{/if}
+        ${user.firstName} ${user.lastName}
+      </a>
+    </div>
+    <div class="extra content">
+      <div class="ui fluid green block button">${user.statusText}</div>
+      <div class="ui fluid button">
+        <a href="../blog/view/${user.id}"><i
+          class="pointing right icon"></i>${user.firstName}'s blog </a>
+      </div>
+    </div>
+  </div>
+  #{/if} #{/list}
+</div>

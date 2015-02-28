@@ -1,0 +1,50 @@
+#{extends 'main.html' /} #{set title:'Spacebook' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="item" href="../../">Back to Start</a>
+  </div>
+</nav>
+#{list items:users, as:'user'} #{if (user.posts.contains(post))}
+<h1>${post.title} (by &nbsp; <img class="ui mini avatar image" src="/profile/getthumbnail/${user.id}" 
+onerror="this.src='../../../public/images/default.jpg'" width="35"
+    height="35"> ${user.firstName} ${user.lastName})</h1>
+#{/if} #{/list}
+<section class="ui basic stacked segment">
+  <h4 class="ui header">
+    <i class="icon inverted circular blue comment"></i> ${post.content}
+  </h4>
+  <div class="ui minimal comments">
+    <h3 class="ui dividing header">Comments</h3>
+    <div class="item">
+      #{list items:post.comments, as:'comment'}
+      <div class="comment">
+        <div class="content">
+          <a class="author">${comment.fromPerson}</a>
+          <div class="metadata">
+            <span class="date">${comment.date}</span>
+          </div>
+          <div class="text">${comment.commentText}</div>
+        </div>
+        #{/list}
+      </div>
+      #{if (!me.equals(null))}
+      <div class="ui form">
+        <form action="../addCommentToUsersPost/${post.id}" method="POST">
+          <div class="field">
+            <input class="input" type="text" name="comment">
+          </div>
+          <button class="ui basic large button teal labeled icon">
+            <i class="icon edit"></i>Place comment
+          </button>
+          #{if (me.posts.contains(post))} <a
+            href="/blog/deletepost/${post.id}"
+            class="ui basic large button red labeled icon"><i
+            class="icon delete"></i> Delete </a> #{/if}
+        </form>
+        #{/if}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.05" errors="0" skipped="0" tests="6" name="BasicTest">
+  <testcase classname="BasicTest" name="testCreateMessage" time="0.02">
+      </testcase>
+  <testcase classname="BasicTest" name="testFindUser" time="0.01">
+      </testcase>
+  <testcase classname="BasicTest" name="aVeryImportantThingToTest" time="0">
+      </testcase>
+  <testcase classname="BasicTest" name="testCreateUser" time="0">
+      </testcase>
+  <testcase classname="BasicTest" name="testMultipleMessages" time="0.01">
+      </testcase>
+  <testcase classname="BasicTest" name="testNoMessagese" time="0.01">
+      </testcase>
+</testsuite>

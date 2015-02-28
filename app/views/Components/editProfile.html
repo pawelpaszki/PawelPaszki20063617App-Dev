@@ -1,0 +1,35 @@
+<div class="ui form">
+  <form action="/editprofile/change" method="POST">
+    <div class="ui medium left floated image">
+      <div class="field">
+        <label>First Name</label> <input placeholder="First Name"
+          type="text" name="firstName" value="${user.firstName}">
+      </div>
+      <div class="field">
+        <label>Last Name</label> <input placeholder="Last Name"
+          type="text" name="lastName" value="${user.lastName}">
+      </div>
+    </div>
+    <div class="ui medium left floated image">
+      <div class="field">
+        <label>Nationality</label> <input placeholder="Nationality"
+          type="text" name="nationality" value="${user.nationality}">
+      </div>
+      <div class="field">
+        <label>Age</label> <input placeholder="Age" type="text"
+          name="age" value="${user.age}">
+      </div>
+    </div>
+    <div class="ui medium left floated image">
+	    <div class="field">
+	      <label>Email</label> <input placeholder="Email" type="text"
+	        name="email" value="${user.email}">
+	    </div>
+	    <div class="field">
+	      <label>Password</label> <input type="password" name="password"
+	        value="">
+	    </div>
+	  </div>
+    <button class="ui basic large teal labeled submit button"> <i class="write icon"></i> Submit</button>
+  </form>
+</div>

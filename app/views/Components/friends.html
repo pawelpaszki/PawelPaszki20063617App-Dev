@@ -1,0 +1,30 @@
+<label class="ui large ribbon label">Friends <a
+		class="ui tiny red circular label"> ${me.friendships.size()} </a></label>
+
+<div class="ui five special cards">
+#{list items:me.friendships, as:'friendship'}
+  <div class="card">
+    <div class="dimmable image">
+      <div class="ui dimmer">
+        <div class="content">
+          <div class="center">
+            <a href="/home/drop/${friendship.targetUser.id}" class="ui inverted button">drop 
+            <i class="red minus square icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <img src="/profile/getpicture/${friendship.targetUser.id}" onerror="this.src='../../../public/images/default.jpg'" >
+    </div>
+    <div class="content">
+      <a class="header" href="/publicprofile/${friendship.targetUser.id}">
+      #{if (loggedInUsers.contains(friendship.targetUser))}
+      <i class="ui tiny empty green circular label"></i>&nbsp;
+      #{/if}
+       ${friendship.targetUser.firstName} ${friendship.targetUser.lastName}</a>
+    </div>
+    <div class="extra content">
+    <div class="ui fluid green block button">${friendship.targetUser.statusText}</div>
+    </div>
+  </div>
+  #{/list}
+</div>

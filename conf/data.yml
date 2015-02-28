@@ -1,0 +1,194 @@
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    email: lisa@simpson.com
+    password: secret
+    nationality: american
+    age: 8
+    statusText: playing game
+    
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    email: marge@simpson.com
+    password: secret
+    nationality: american
+    age: 42
+    statusText: relaxing
+
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    nationality: american
+    age: 45
+    statusText: beer and popcorn
+
+User(abraham):
+    firstName: Abraham
+    lastName: Simpson
+    email: abraham@simpson.com
+    password: secret
+    nationality: american
+    age: 64
+    statusText: watching tv
+
+User(amber):
+    firstName: Amber
+    lastName: Simpson
+    email: amber@simpson.com
+    password: secret
+    nationality: american
+    age: 44
+    statusText: hanging out
+        
+User(mona):
+    firstName: Mona
+    lastName: Simpson
+    email: mona@simpson.com
+    password: secret
+    nationality: american
+    age: 62
+    statusText: sleeping
+    
+User(herbert):
+    firstName: Herbert
+    lastName: Powell
+    email: herbert@powell.com
+    password: secret 
+    nationality: american
+    age: 42   
+    statusText: drinking
+    
+User(mabel):
+    firstName: Mabel
+    lastName: Simpson
+    email: mabel@simpson.com
+    password: secret  
+    nationality: american
+    age: 67
+    statusText: very busy
+    
+User(eliza):
+    firstName: Eliza
+    lastName: Simpson
+    email: eliza@simpson.com
+    password: secret 
+    nationality: american
+    age: 39
+    statusText: on holidays
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    nationality: american
+    age: 10
+    statusText: pc and chips:)
+
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    email: maggie@simpson.com
+    password: secret
+    nationality: american
+    age: 2
+    statusText: watching cartoons
+
+Friendship(f1):
+    sourceUser: homer
+    targetUser: marge
+
+Friendship(f2):
+    sourceUser: homer
+    targetUser: lisa
+
+Friendship(f3):
+    sourceUser: homer
+    targetUser: bart
+
+Friendship(f4):
+    sourceUser: homer
+    targetUser: maggie
+
+Friendship(f5):
+    sourceUser: bart
+    targetUser: marge
+
+Friendship(f6):
+    sourceUser: bart
+    targetUser: homer
+
+Friendship(f7):
+    sourceUser: bart
+    targetUser: lisa
+
+Friendship(f8):
+    sourceUser: bart
+    targetUser: maggie
+
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    email: homer@simpson.com
+    password: secret
+    nationality: american
+    age: 45
+    statusText: beer and popcorn
+    friendships:
+        - f1
+        - f2
+        - f3
+        - f4
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    email: bart@simpson.com
+    password: secret
+    nationality: american
+    age: 10
+    statusText: pc and chips:)
+    friendships:
+        - f5
+        - f6
+        - f7
+        - f8
+
+Message(message1):
+    from : marge
+    to   : homer
+    messageText: 'how are things going?'
+    
+Message(message2):
+    from : lisa
+    to   : homer
+    messageText: 'Get me outta here!'
+
+Message(message3):
+    from : bart
+    to   : homer
+    messageText: 'Where is my money?!'
+
+Message(message4):
+    from : lisa
+    to   : bart
+    messageText: 'shut up!'
+
+Message(message5):
+    from : homer
+    to   : bart
+    messageText: 'Whaaat?!?'
+
+Message(message6):
+    from : marge
+    to   : bart
+    messageText: 'Hello there!'
+
+Message(message7):
+    from : homer
+    to   : lisa
+    messageText: 'Hi there!'

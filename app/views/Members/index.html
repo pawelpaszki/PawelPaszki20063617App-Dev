@@ -1,0 +1,40 @@
+#{extends 'main.html' /} #{set title:'Members' /}
+
+<nav class="ui inverted menu">
+  <label class="item"><button class="ui mini black button"> <img
+                class="ui mini avatar image"
+                src="../../public/images/space.jpg">Spacebook </button></label>
+  <div class="right menu">
+  	<label class="item"><button class="ui mini black button"> <img
+                class="ui mini avatar image"
+                src="/profile/getthumbnail/${me.id}" onerror="this.src='../../../public/images/default.jpg'" width="35"
+    height="35"> ${me.firstName} ${me.lastName}</button></label>
+    <a class="item" href="/home"><i class="home icon"></i>Home</a> 
+    <a class="active item" href="/members"><i class="users icon"></i>Members</a> 
+    <a class="item" href="/profile"><i class="user icon"></i>Profile</a>
+    <a class="item" href="/blog"><i class="comment icon"></i>Blog</a>
+    <div class="item">
+      <div class="ui floating black dropdown button">
+        <div class="text"><i class="settings icon"></i></div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="/editprofile"><i class="setting icon"></i> Edit Profile</a> 
+          <a class="item" href="/logout"><i class="sign out icon"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<h1>Spacebook Members</h1>
+
+<section class="ui basic segment">
+	#{include "components/membersList.html" /}
+</section>
+
+<script>
+	$('.ui.dropdown').dropdown();
+	$('.special.cards .image').dimmer({
+		  on: 'hover'
+		});
+</script>

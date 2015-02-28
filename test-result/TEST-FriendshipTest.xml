@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.24" errors="0" skipped="0" tests="6" name="FriendshipTest">
+  <testcase classname="FriendshipTest" name="testNoFriendships" time="0.022">
+      </testcase>
+  <testcase classname="FriendshipTest" name="testAddOneFriend" time="0.031">
+      </testcase>
+  <testcase classname="FriendshipTest" name="testAddingMultipleFriends" time="0.046">
+      </testcase>
+  <testcase classname="FriendshipTest" name="testFindFriendships" time="0.032">
+      </testcase>
+  <testcase classname="FriendshipTest" name="testUpdateFriendship" time="0.07">
+      </testcase>
+  <testcase classname="FriendshipTest" name="testDeleteFriendship" time="0.039">
+      </testcase>
+</testsuite>

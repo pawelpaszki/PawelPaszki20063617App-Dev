@@ -1,0 +1,19 @@
+#{extends 'main.html' /} #{set title:'Public Blog' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="item" href="../../home"><i class="home icon"></i>Home</a>
+  </div>
+</nav>
+
+<h1>${user.firstName} ${user.lastName}'s Public Blog</h1>
+<section class="ui basic stacked segment">
+  <label class="ui large basic ribbon label">Published Posts</label>
+  #{list items:user.posts, as:'post'}
+  <div class="ui list">
+     <a class="ui basic labeled button"
+      href="../../blog/viewUsersPost/${post.id}"><i class="icon pointing right"></i>&nbsp;&nbsp;${post.title}</a> 
+  </div>
+  #{/list}
+</section>

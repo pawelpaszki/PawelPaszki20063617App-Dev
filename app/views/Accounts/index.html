@@ -1,0 +1,16 @@
+#{extends 'main.html' /} #{set title:'Welcome to Spacebook' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="item" href="/signup"> Signup </a> 
+    <a class="item" href="/login"> Login </a>
+  </div>
+</nav>
+
+  <h1>Signup or Log in to the Spacebook Service</h1>
+
+<label class="ui large basic ribbon label">Users' Blogs</label>
+<section class="ui basic raised segment">
+  #{include "components/blogs.html" /}
+</section>

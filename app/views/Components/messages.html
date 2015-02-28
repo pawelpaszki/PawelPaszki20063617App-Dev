@@ -1,0 +1,35 @@
+<section class="ui basic stacked segment">
+  <label class="ui large ribbon label">Messages <a
+    class="ui tiny green circular label"> ${me.inbox.size()} </a></label> #{if
+  me.inbox.size() > 0}
+  <table class="ui basic table">
+    <thead>
+      <tr>
+        <th class="eight wide"><div
+            class="ui inverted fluid large purple ribbon label">From</div></th>
+        <th class="eight wide"><div
+            class="ui inverted fluid large purple ribbon label">Message</div></th>
+      </tr>
+    </thead>
+    <thead>
+      #{list items:me.inbox, as:'message'}
+      <tr>
+        <th class="eight wide">#{if
+          (loggedInUsers.contains(message.from)) && (!me.equals(user))}
+          <i class="ui tiny empty green circular label"></i>&nbsp;
+          #{/if} #{else} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #{/else} <a
+          href="/publicprofile/${message.from.id}"> <img
+            class="ui mini avatar image"
+            src="/profile/getthumbnail/${message.from.id}"
+            onerror="this.src='../../../public/images/default.jpg'"
+            width="35" height="35">
+            ${message.from.firstName} ${message.from.lastName}
+        </a>
+        </th>
+        <th class="eight wide">${message.messageText}</th>
+      </tr>
+      #{/list}
+    </thead>
+  </table>
+  #{/if}
+</section>

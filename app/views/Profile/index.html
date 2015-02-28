@@ -1,0 +1,50 @@
+#{extends 'main.html' /} #{set title:'Profile' /}
+
+<nav class="ui inverted menu">
+  <label class="item"><button class="ui mini black button"> <img
+                class="ui mini avatar image"
+                src="../../public/images/space.jpg">Spacebook </button></label>
+  <div class="right menu">
+  <label class="item"><button class="ui mini black button"> <img
+                class="ui mini avatar image"
+                src="/profile/getthumbnail/${me.id}" onerror="this.src='../../../public/images/default.jpg'" width="35"
+    height="35"> ${me.firstName} ${me.lastName}</button></label>
+    <a class="item" href="/home"><i class="home icon"></i>Home</a> 
+    <a class="item" href="/members"><i class="users icon"></i>Members</a> 
+    <a class="active item" href="/profile"><i class="user icon"></i>Profile</a>
+    <a class="item" href="/blog"><i class="comment icon"></i>Blog</a>
+    <div class="item">
+      <div class="ui floating black dropdown button">
+        <div class="text"><i class="settings icon"></i></div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="/editprofile"><i class="setting icon"></i> Edit Profile</a> 
+          <a class="item" href="/logout"><i class="sign out icon"></i> Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<h1>${me.firstName} ${me.lastName}'s Profile <div class="ui basic massive green block label">${me.statusText}</div></h1>
+
+<section class="ui basic four column grid segment">
+  <div class="row">
+    <div class="basic six wide column">
+      #{include "components/profileDetails.html"/}
+      #{include "components/statusupdate.html" /}
+     </div>
+     <div class="basic one wide column">
+     </div>
+     <div class="basic four wide column">
+      #{include "components/smallPhoto.html"/}
+    </div>
+    <div class="basic five wide column">
+      #{include "components/largePhoto.html"/}
+    </div>
+  </div>
+</section>
+
+<script>
+	$('.ui.dropdown').dropdown();
+</script>

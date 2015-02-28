@@ -1,0 +1,25 @@
+#{extends 'main.html' /} #{set title:'Public Profile Page' /}
+
+<nav class="ui inverted menu">
+  <label class="item"><button class="ui mini black button">
+      <img class="ui mini avatar image"
+        src="../../public/images/space.jpg">Spacebook
+    </button></label>
+  <div class="right menu">
+    <label class="item"><button class="ui mini black button">
+        <img class="ui mini avatar image"
+          src="/profile/getthumbnail/${me.id}"
+          onerror="this.src='../../../public/images/default.jpg'"
+          width="35" height="35"> ${me.firstName} ${me.lastName}
+      </button></label> <a class="item" href="/home"><i class="home icon"></i>Home</a>
+  </div>
+</nav>
+
+<h1>${user.firstName} ${user.lastName}'s Profile</h1>
+<section class="ui basic two column grid segment">
+  <div class="row">
+    <div class="column">#{include "components/userinfo.html" /}</div>
+    <div class="column">#{include
+      "components/messagesinvisit.html" /}</div>
+  </div>
+</section>

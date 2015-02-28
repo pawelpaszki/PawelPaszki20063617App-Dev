@@ -1,0 +1,14 @@
+#{extends 'main.html' /} #{set title:'Login to Spacebook' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="item" href="/signup"> Signup </a> <a class="active item"
+      href="/login"> Login </a>
+  </div>
+</nav>
+
+<h1>Please enter your details to authenticate</h1>
+<section class="ui basic form segment">
+  #{include "components/loginform.html" /}
+</section>

@@ -1,0 +1,10 @@
+<section class="ui basic stacked segment">
+  <label class="ui large basic ribbon label">Published Posts</label>
+  <div class="ui list">
+  #{list items:user.posts, as:'post'}
+    <div class = "item">
+    <a class="ui basic blue inverted labeled button" href="blog/viewPost/${post.id}"><i class="icon pointing right"></i>&nbsp;&nbsp;${post.title}</a>
+    </div>
+  #{/list}
+  </div>
+</section>

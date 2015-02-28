@@ -1,0 +1,21 @@
+body
+{
+  width: 76%;
+  margin-left: 12%;
+  margin-top: 2%;
+  background: url("../images/galaxy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  font-size: 0.9em;
+}
+
+.friending
+{
+  text-decoration: none;
+} 
+.input
+{
+  margin-bottom: 10px;	
+}

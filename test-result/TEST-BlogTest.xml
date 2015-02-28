@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.223" errors="0" skipped="0" tests="6" name="BlogTest">
+  <testcase classname="BlogTest" name="testCreatePost" time="0.09">
+      </testcase>
+  <testcase classname="BlogTest" name="testCreateMultiplePosts" time="0.026">
+      </testcase>
+  <testcase classname="BlogTest" name="testUpdatePost" time="0.019">
+      </testcase>
+  <testcase classname="BlogTest" name="testDeletePost" time="0.046">
+      </testcase>
+  <testcase classname="BlogTest" name="testNoPosts" time="0.019">
+      </testcase>
+  <testcase classname="BlogTest" name="testFindPosts" time="0.023">
+      </testcase>
+</testsuite>

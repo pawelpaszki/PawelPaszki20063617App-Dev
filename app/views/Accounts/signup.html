@@ -1,0 +1,17 @@
+#{extends 'main.html' /} #{set title:'Signup for Spacebook' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="active item" href="/signup"> Signup </a> <a class="item"
+      href="/login"> Login </a>
+  </div>
+</nav>
+
+<h1>Please enter your details to register</h1>
+</br>
+</br>
+
+<section class="ui grid">
+    #{include "components/registerform.html" /}
+</section>
